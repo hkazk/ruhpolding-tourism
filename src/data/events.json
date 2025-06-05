@@ -1,0 +1,37 @@
+[
+    {
+      "title": "Almabtrieb Festival",
+      "date": "Sep 20, 2025",
+      "image": "https://images.unsplash.com/photo-1641438966016-4e0cb100ca14?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "price": 25,
+      "description": "Join this festive alpine tradition where cows are paraded through the village in colorful decorations."
+    },
+    {
+      "title": "Snowboarding Weekend",
+      "date": "Jan 10, 2026",
+      "image": "https://images.unsplash.com/photo-1589779385216-376083ba0dc7?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "price": 60,
+      "description": "Experience the thrill of snowboarding on the best slopes with expert instructors."
+    },
+    {
+      "title": "Mountain Hiking Tour",
+      "date": "May 1, 2026",
+      "image": "https://plus.unsplash.com/premium_photo-1701198236436-fcf103254fe6?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "price": 40,
+      "description": "Join us for an exhilarating hiking tour through breathtaking mountain landscapes."
+    },
+    {
+      "title": "Ruhpolding Beer Fest",
+      "date": "Aug 12, 2025",
+      "image": "https://images.unsplash.com/photo-1519114056088-b877fe073a5e?q=80&w=3133&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "price": 30,
+      "description": "Enjoy a weekend of local brews, delicious food, and live music at the beer fest."
+    },
+    {
+      "title": "Christmas Village Market",
+      "date": "Dec 15, 2025",
+      "image": "https://images.unsplash.com/photo-1736229876491-425da6e13d62?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "price": 20,
+      "description": "Experience the magic of Christmas with festive stalls and holiday treats in the village."
+    }
+  ]

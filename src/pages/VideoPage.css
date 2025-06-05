@@ -1,0 +1,248 @@
+.video-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #8b0000 0%, #4a0e4e 50%, #8b0000 100%);
+    padding: 2rem 0;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .video-hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+  }
+  
+  .back-to-globe-btn {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.8), rgba(74, 144, 226, 0.6));
+    color: white;
+    border: 2px solid rgba(74, 144, 226, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    font-weight: 500;
+  }
+  
+  .back-to-globe-btn:hover {
+    background: linear-gradient(135deg, rgba(74, 144, 226, 1), rgba(74, 144, 226, 0.8));
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(74, 144, 226, 0.4);
+  }
+  
+  .video-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+  }
+  
+  .video-subtitle {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .video-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .main-video {
+    margin-bottom: 4rem;
+    animation: slideUp 0.8s ease 0.2s both;
+  }
+  
+  .video-placeholder {
+    position: relative;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    aspect-ratio: 16/9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px dashed rgba(231, 76, 60, 0.5);
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .video-placeholder:hover {
+    border-color: rgba(231, 76, 60, 0.8);
+    transform: scale(1.02);
+    box-shadow: 0 10px 40px rgba(231, 76, 60, 0.3);
+  }
+  
+  .play-button {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #E74C3C, #C0392B);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(231, 76, 60, 0.4);
+    transition: all 0.3s ease;
+  }
+  
+  .video-placeholder:hover .play-button {
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(231, 76, 60, 0.6);
+  }
+  
+  .play-icon {
+    font-size: 3rem;
+    margin-left: 0.3rem;
+  }
+  
+  .video-info {
+    text-align: center;
+    color: white;
+  }
+  
+  .video-info h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .video-info p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .video-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    animation: slideUp 0.8s ease both;
+  }
+  
+  .video-card:nth-child(1) { animation-delay: 0.3s; }
+  .video-card:nth-child(2) { animation-delay: 0.4s; }
+  .video-card:nth-child(3) { animation-delay: 0.5s; }
+  .video-card:nth-child(4) { animation-delay: 0.6s; }
+  
+  .video-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(231, 76, 60, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(231, 76, 60, 0.4);
+  }
+  
+  .video-thumbnail {
+    position: relative;
+    aspect-ratio: 16/9;
+    background: linear-gradient(135deg, rgba(231, 76, 60, 0.3), rgba(192, 57, 43, 0.3));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .thumbnail-icon {
+    font-size: 3rem;
+    opacity: 0.8;
+  }
+  
+  .video-duration {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .video-card-info {
+    padding: 1.5rem;
+  }
+  
+  .video-card-info h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .video-card-info p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { 
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .video-title {
+      font-size: 2.5rem;
+    }
+    
+    .video-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    .back-to-globe-btn {
+      position: static;
+      margin-bottom: 2rem;
+    }
+    
+    .video-hero {
+      padding: 2rem 1rem;
+    }
+    
+    .play-button {
+      width: 80px;
+      height: 80px;
+    }
+    
+    .play-icon {
+      font-size: 2rem;
+    }
+    
+    .video-info h3 {
+      font-size: 1.5rem;
+    }
+  }

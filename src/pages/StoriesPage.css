@@ -1,0 +1,204 @@
+.stories-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2c3e50 0%, #3e2723 50%, #2c3e50 100%);
+    padding: 2rem 0;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .stories-hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+  }
+  
+  .back-to-globe-btn {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.8), rgba(74, 144, 226, 0.6));
+    color: white;
+    border: 2px solid rgba(74, 144, 226, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    font-weight: 500;
+  }
+  
+  .back-to-globe-btn:hover {
+    background: linear-gradient(135deg, rgba(74, 144, 226, 1), rgba(74, 144, 226, 0.8));
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(74, 144, 226, 0.4);
+  }
+  
+  .stories-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+  }
+  
+  .stories-subtitle {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .stories-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .story-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    animation: slideUp 0.8s ease both;
+  }
+  
+  .story-card:nth-child(1) { animation-delay: 0.1s; }
+  .story-card:nth-child(2) { animation-delay: 0.2s; }
+  .story-card:nth-child(3) { animation-delay: 0.3s; }
+  .story-card:nth-child(4) { animation-delay: 0.4s; }
+  
+  .story-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(46, 204, 113, 0.2);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(46, 204, 113, 0.3);
+  }
+  
+  .story-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+  
+  .story-icon {
+    font-size: 3rem;
+  }
+  
+  .story-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-end;
+    font-size: 0.8rem;
+  }
+  
+  .story-category {
+    background: linear-gradient(135deg, #2ECC71, #27AE60);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-weight: 500;
+  }
+  
+  .story-read-time {
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .story-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    line-height: 1.3;
+  }
+  
+  .story-excerpt {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  .story-read-btn {
+    background: linear-gradient(135deg, #2ECC71, #27AE60);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+  
+  .story-read-btn:hover {
+    background: linear-gradient(135deg, #27AE60, #2ECC71);
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.4);
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { 
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .stories-title {
+      font-size: 2.5rem;
+    }
+    
+    .stories-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    .back-to-globe-btn {
+      position: static;
+      margin-bottom: 2rem;
+    }
+    
+    .stories-hero {
+      padding: 2rem 1rem;
+    }
+    
+    .story-header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
+    }
+    
+    .story-meta {
+      align-items: center;
+    }
+  }

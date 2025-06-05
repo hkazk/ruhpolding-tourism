@@ -1,0 +1,293 @@
+.accommodation-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #b8860b 0%, #daa520 50%, #b8860b 100%);
+    padding: 2rem 0;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .accommodation-hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+  }
+  
+  .back-to-globe-btn {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.8), rgba(74, 144, 226, 0.6));
+    color: white;
+    border: 2px solid rgba(74, 144, 226, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    font-weight: 500;
+  }
+  
+  .back-to-globe-btn:hover {
+    background: linear-gradient(135deg, rgba(74, 144, 226, 1), rgba(74, 144, 226, 0.8));
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(74, 144, 226, 0.4);
+  }
+  
+  .accommodation-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+  }
+  
+  .accommodation-subtitle {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .accommodation-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+  }
+  
+  /* Accommodations Section */
+  .accommodations-section {
+    margin-bottom: 5rem;
+  }
+  
+  .accommodations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+  
+  .accommodation-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    animation: slideUp 0.8s ease both;
+  }
+  
+  .accommodation-card:nth-child(1) { animation-delay: 0.1s; }
+  .accommodation-card:nth-child(2) { animation-delay: 0.2s; }
+  .accommodation-card:nth-child(3) { animation-delay: 0.3s; }
+  .accommodation-card:nth-child(4) { animation-delay: 0.4s; }
+  
+  .accommodation-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(218, 165, 32, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(218, 165, 32, 0.4);
+  }
+  
+  .accommodation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .accommodation-icon {
+    font-size: 3rem;
+  }
+  
+  .accommodation-rating {
+    font-size: 1.2rem;
+  }
+  
+  .accommodation-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .accommodation-type {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+  
+  .accommodation-price {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #F39C12;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  .accommodation-amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .amenity-tag {
+    background: rgba(243, 156, 18, 0.3);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: 1px solid rgba(243, 156, 18, 0.5);
+  }
+  
+  .accommodation-book-btn {
+    background: linear-gradient(135deg, #F39C12, #E67E22);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+  
+  .accommodation-book-btn:hover {
+    background: linear-gradient(135deg, #E67E22, #F39C12);
+    transform: scale(1.02);
+    box-shadow: 0 5px 20px rgba(243, 156, 18, 0.4);
+  }
+  
+  /* Services Section */
+  .services-section {
+    margin-bottom: 3rem;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .service-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    animation: slideUp 0.8s ease both;
+  }
+  
+  .service-card:nth-child(1) { animation-delay: 0.5s; }
+  .service-card:nth-child(2) { animation-delay: 0.6s; }
+  .service-card:nth-child(3) { animation-delay: 0.7s; }
+  .service-card:nth-child(4) { animation-delay: 0.8s; }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(218, 165, 32, 0.2);
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  .service-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .service-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .service-description {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+  
+  .service-price {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #F39C12;
+    margin-bottom: 1.5rem;
+  }
+  
+  .service-book-btn {
+    background: linear-gradient(135deg, #F39C12, #E67E22);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .service-book-btn:hover {
+    background: linear-gradient(135deg, #E67E22, #F39C12);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4);
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { 
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .accommodation-title {
+      font-size: 2.5rem;
+    }
+    
+    .accommodations-grid,
+    .services-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    .back-to-globe-btn {
+      position: static;
+      margin-bottom: 2rem;
+    }
+    
+    .accommodation-hero {
+      padding: 2rem 1rem;
+    }
+    
+    .section-title {
+      font-size: 2rem;
+    }
+  }

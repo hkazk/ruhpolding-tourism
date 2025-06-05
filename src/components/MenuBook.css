@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap");
+
+.menu-book-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at center, #4a3728 0%, #2c2416 40%, #1a1611 100%);
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+  /* Ensure text appears in black when rendered */
+  color: #000000;
+}
+
+.outline-text {
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3); /* Changed to black outline */
+  color: #000000; /* Explicit black text color */
+}
+
+/* Horizontal scrolling animations */
+@keyframes horizontal-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes horizontal-scroll-2 {
+  0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-horizontal-scroll {
+  animation: horizontal-scroll 60s linear infinite;
+}
+
+.animate-horizontal-scroll-2 {
+  animation: horizontal-scroll-2 60s linear infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.7);
+}
+
+/* Button hover effects */
+.menu-book-container button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-book-container button:hover {
+  transform: translateY(-2px);
+}
+
+/* Text selection - ensure black text */
+.menu-book-container {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #000000; /* Force black text color */
+}
+
+/* Ensure all text elements in menu book are black */
+.menu-book-container * {
+  color: #000000 !important;
+}
+
+/* Loading animation for canvas */
+.menu-book-container canvas {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .menu-book-container {
+    background: radial-gradient(circle at center, #4a3728 0%, #2c2416 60%, #1a1611 100%);
+    color: #000000; /* Maintain black text on mobile */
+  }
+  
+  .animate-horizontal-scroll,
+  .animate-horizontal-scroll-2 {
+    animation-duration: 40s;
+  }
+}
+
+/* Performance optimizations */
+.menu-book-container * {
+  will-change: auto;
+  color: #000000; /* Ensure black text for all elements */
+}
+
+.animate-horizontal-scroll,
+.animate-horizontal-scroll-2 {
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-horizontal-scroll,
+  .animate-horizontal-scroll-2 {
+    animation: none;
+  }
+  
+  .menu-book-container button {
+    transition: none;
+  }
+}
+
+/* Additional styles to ensure black text in menu pages */
+.menu-page-text {
+  color: #000000 !important;
+  fill: #000000 !important;
+}
+
+/* Force black text for any canvas-rendered text */
+canvas {
+  color: #000000;
+}
