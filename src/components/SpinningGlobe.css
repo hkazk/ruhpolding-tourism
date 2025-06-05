@@ -831,349 +831,397 @@
     .center-instructions .instruction-text {
       font-size: 1rem;
     }
-     /* MOBILE-FIRST RESPONSIVE DESIGN FOR SPINNING GLOBE */
-/* Replace your existing mobile styles with these optimized ones */
+    /* MOBILE-FIRST: OPTIONS PANEL ONLY (NO GLOBE) */
+/* Replace your SpinningGlobe.css mobile sections with this */
 
-/* Base styles - Mobile First */
-.spinning-globe-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background: radial-gradient(ellipse at center, #000000 0%, #111111 40%, #000000 100%);
-}
-
-/* Globe Container - Mobile optimized */
-.globe-container {
-  width: 100%;
-  height: 100%;
-  transition: all 0.8s ease-in-out;
-  position: relative;
-  cursor: pointer;
-}
-
-/* Hide click hint on mobile - it's redundant */
-.click-hint {
-  display: none;
-}
-
-/* Mobile-first compact options panel */
-.compact-options-panel {
-  position: fixed;
-  bottom: 2rem;
-  left: 1rem;
-  right: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.9);
-  backdrop-filter: blur(30px);
-  border-radius: 25px;
-  padding: 1rem;
-  z-index: 10;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-}
-
-.compact-option-dot {
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(20px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  animation: fadeInDot 0.6s ease both;
-  /* Mobile-optimized sizes */
-  width: 50px;
-  height: 50px;
-  font-size: 1.2rem;
-}
-
-.compact-option-dot:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
-  filter: brightness(1.2);
-}
-
-/* Simplify dot sizes for mobile */
-.dot-large {
-  width: 55px;
-  height: 55px;
-  font-size: 1.4rem;
-}
-
-.dot-small {
-  width: 50px;
-  height: 50px;
-  font-size: 1.2rem;
-  opacity: 0.9;
-}
-
-/* Mobile-first options panel */
-.options-panel {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(15, 15, 25, 0.97) 0%, rgba(5, 5, 15, 0.99) 100%);
-  backdrop-filter: blur(30px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 3rem 1.5rem 2rem;
-  z-index: 20;
-  animation: slideInUp 0.6s ease;
-}
-
-/* Hide globe when options panel is open on mobile */
-.globe-container.globe-minimized {
-  display: none;
-}
-
-.options-title {
-  color: #ffffff;
-  font-size: 1.8rem;
-  font-weight: 300;
-  margin-bottom: 2rem;
-  text-align: center;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
-  letter-spacing: 1px;
-}
-
-.options-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-  width: 100%;
-  max-width: 400px;
-  flex: 1;
-  justify-content: center;
-}
-
-/* Mobile-optimized option items */
-.option-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(20px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
-  padding: 1.2rem 1.5rem;
-  width: 100%;
-  justify-content: flex-start;
-  animation: fadeInDot 0.6s ease both;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  min-height: 60px; /* Touch-friendly */
-}
-
-.option-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
-  filter: brightness(1.15);
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-.option-large {
-  padding: 1.4rem 1.6rem;
-  min-height: 65px;
-}
-
-.option-small {
-  padding: 1.2rem 1.5rem;
-  opacity: 0.95;
-  min-height: 60px;
-}
-
-.option-icon {
-  font-size: 1.5rem;
-  min-width: 35px;
-  text-align: center;
-}
-
-.option-text {
-  color: white;
-  font-weight: 500;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-  flex: 1;
-  text-align: left;
-  font-size: 1rem;
-  line-height: 1.3;
-}
-
-/* Mobile-friendly close button */
-.minimize-hint {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.9rem;
-  text-align: center;
-  margin-top: 1.5rem;
-  padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 25px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  font-weight: 300;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  min-height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.minimize-hint:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: scale(1.02);
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Modal improvements for mobile */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: fadeIn 0.5s ease;
-  z-index: 30;
-  padding: 1rem;
-}
-
-.contact-modal {
-  background: rgba(15, 15, 25, 0.95);
-  backdrop-filter: blur(30px);
-  border-radius: 20px;
-  padding: 2rem 1.5rem;
-  width: 100%;
-  max-width: 400px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  position: relative;
-}
-
-.close-button {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: rgba(255, 255, 255, 0.2);
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  color: white;
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.close-button:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: scale(1.1);
-}
-
-.contact-title {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: 300;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.form-input,
-.form-textarea {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 12px;
-  padding: 1rem;
-  color: white;
-  font-size: 16px; /* Prevents zoom on iOS */
-  transition: all 0.3s ease;
-  min-height: 50px;
-}
-
-.form-input::placeholder,
-.form-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.form-input:focus,
-.form-textarea:focus {
-  outline: none;
-  border-color: rgba(255, 255, 255, 0.6);
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
-}
-
-.submit-button {
-  background: linear-gradient(135deg, #9B59B6 0%, #8E44AD 100%);
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 12px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 0.5rem;
-  min-height: 50px;
-}
-
-.submit-button:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.1);
-  box-shadow: 0 4px 15px rgba(155, 89, 182, 0.4);
-}
-
-/* Animations */
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(100%);
+/* Base Mobile Styles - Default state shows options panel directly */
+@media (max-width: 768px) {
+  .spinning-globe-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #000428 0%, #004e92 50%, #000428 100%);
+    display: flex;
+    flex-direction: column;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fadeInDot {
-  from { 
-    opacity: 0; 
-    transform: scale(0.8); 
+  /* HIDE GLOBE COMPLETELY ON MOBILE */
+  .globe-container {
+    display: none !important;
   }
-  to { 
-    opacity: 1; 
-    transform: scale(1); 
-  }
-}
 
-/* Tablet styles (768px and up) */
-@media (min-width: 768px) {
-  /* Show click hint on larger screens */
+  .globe-container.globe-minimized {
+    display: none !important;
+  }
+
+  /* HIDE COMPACT OPTIONS PANEL (we don't need dots) */
+  .compact-options-panel {
+    display: none !important;
+  }
+
+  /* HIDE CLICK HINT */
   .click-hint {
+    display: none !important;
+  }
+
+  /* SHOW OPTIONS PANEL AS MAIN INTERFACE */
+  .options-panel {
+    position: static !important;
+    width: 100% !important;
+    height: 100vh !important;
+    background: linear-gradient(135deg, #000428 0%, #004e92 50%, #000428 100%) !important;
+    backdrop-filter: none !important;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem 1.5rem !important;
+    z-index: 1 !important;
+    animation: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* MOBILE HEADER */
+  .options-title {
+    color: #ffffff !important;
+    font-size: 2.2rem !important;
+    font-weight: 300 !important;
+    margin: 2rem 0 1rem 0 !important;
+    text-align: center !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7) !important;
+    letter-spacing: 1px !important;
+    background: linear-gradient(135deg, #ffffff, #74b9ff) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+  }
+
+  /* ADD SUBTITLE */
+  .options-title::after {
+    content: "Discover Alpine Bavaria";
     display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    background: none;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  /* VERTICAL OPTIONS LIST */
+  .options-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.2rem !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 400px !important;
+    flex: 1 !important;
+    justify-content: center !important;
+    padding: 1rem 0 !important;
+  }
+
+  /* MOBILE-OPTIMIZED OPTION CARDS */
+  .option-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.2rem !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    backdrop-filter: blur(20px) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+    border-radius: 20px !important;
+    padding: 1.5rem 1.8rem !important;
+    width: 100% !important;
+    justify-content: flex-start !important;
+    animation: fadeInUp 0.6s ease both !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    min-height: 70px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .option-item:nth-child(1) { animation-delay: 0.1s !important; }
+  .option-item:nth-child(2) { animation-delay: 0.2s !important; }
+  .option-item:nth-child(3) { animation-delay: 0.3s !important; }
+  .option-item:nth-child(4) { animation-delay: 0.4s !important; }
+  .option-item:nth-child(5) { animation-delay: 0.5s !important; }
+
+  .option-item:hover,
+  .option-item:active {
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 0 12px 40px rgba(116, 185, 255, 0.3) !important;
+    filter: brightness(1.15) !important;
+    border-color: rgba(116, 185, 255, 0.4) !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+  }
+
+  /* REMOVE SIZE VARIATIONS ON MOBILE */
+  .option-large,
+  .option-small {
+    padding: 1.5rem 1.8rem !important;
+    min-height: 70px !important;
+    opacity: 1 !important;
+  }
+
+  /* LARGER ICONS FOR MOBILE */
+  .option-icon {
+    font-size: 1.8rem !important;
+    min-width: 40px !important;
+    text-align: center !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  /* BETTER TEXT FOR MOBILE */
+  .option-text {
+    color: white !important;
+    font-weight: 500 !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+    flex: 1 !important;
+    text-align: left !important;
+    font-size: 1.1rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* HIDE MINIMIZE HINT ON MOBILE */
+  .minimize-hint {
+    display: none !important;
+  }
+
+  /* MOBILE MODAL IMPROVEMENTS */
+  .modal-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: rgba(0, 0, 0, 0.95) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    animation: fadeIn 0.5s ease !important;
+    z-index: 1000 !important;
+    padding: 1rem !important;
+  }
+
+  .contact-modal {
+    background: linear-gradient(135deg, rgba(15, 15, 25, 0.95), rgba(5, 5, 15, 0.98)) !important;
+    backdrop-filter: blur(30px) !important;
+    border-radius: 20px !important;
+    padding: 2.5rem 2rem !important;
+    width: 100% !important;
+    max-width: 400px !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    position: relative !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  .close-button {
+    position: absolute !important;
+    top: 1rem !important;
+    right: 1rem !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+    border: none !important;
+    border-radius: 50% !important;
+    width: 44px !important;
+    height: 44px !important;
+    color: white !important;
+    font-size: 1.5rem !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .close-button:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+    transform: scale(1.1) !important;
+  }
+
+  .contact-title {
+    color: white !important;
+    font-size: 1.6rem !important;
+    font-weight: 300 !important;
+    margin-bottom: 1.5rem !important;
+    text-align: center !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  .contact-form {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.2rem !important;
+  }
+
+  .form-input,
+  .form-textarea {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 12px !important;
+    padding: 1.2rem !important;
+    color: white !important;
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    transition: all 0.3s ease !important;
+    min-height: 54px !important;
+  }
+
+  .form-input::placeholder,
+  .form-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+
+  .form-input:focus,
+  .form-textarea:focus {
+    outline: none !important;
+    border-color: rgba(116, 185, 255, 0.6) !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 0 0 2px rgba(116, 185, 255, 0.2) !important;
+  }
+
+  .submit-button {
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%) !important;
+    color: white !important;
+    border: none !important;
+    padding: 1.2rem 2rem !important;
+    border-radius: 12px !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    margin-top: 0.5rem !important;
+    min-height: 54px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  .submit-button:hover {
+    transform: translateY(-2px) !important;
+    filter: brightness(1.1) !important;
+    box-shadow: 0 8px 25px rgba(116, 185, 255, 0.4) !important;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}
+
+/* SMALL MOBILE PHONES (iPhone SE, etc.) */
+@media (max-width: 480px) {
+  .options-panel {
+    padding: 1.5rem 1rem !important;
+  }
+
+  .options-title {
+    font-size: 1.8rem !important;
+    margin: 1.5rem 0 0.8rem 0 !important;
+  }
+
+  .options-title::after {
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+  }
+
+  .options-list {
+    gap: 1rem !important;
+    padding: 0.8rem 0 !important;
+  }
+
+  .option-item {
+    padding: 1.3rem 1.5rem !important;
+    min-height: 65px !important;
+    gap: 1rem !important;
+  }
+
+  .option-icon {
+    font-size: 1.6rem !important;
+    min-width: 36px !important;
+  }
+
+  .option-text {
+    font-size: 1rem !important;
+  }
+
+  .contact-modal {
+    padding: 2rem 1.5rem !important;
+    margin: 0.5rem !important;
+  }
+
+  .contact-title {
+    font-size: 1.4rem !important;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 1rem !important;
+    min-height: 50px !important;
+  }
+
+  .submit-button {
+    padding: 1rem 1.5rem !important;
+    font-size: 1rem !important;
+    min-height: 50px !important;
+  }
+}
+
+/* TABLET AND DESKTOP - SHOW GLOBE */
+@media (min-width: 769px) {
+  /* Reset mobile overrides and show normal globe interface */
+  .spinning-globe-container {
+    background: radial-gradient(ellipse at center, #000000 0%, #111111 40%, #000000 100%);
+    display: block;
+  }
+
+  .globe-container {
+    display: block !important;
+    width: 100%;
+    height: 100%;
+    transition: all 0.8s ease-in-out;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .globe-container.globe-minimized {
+    display: block !important;
+    width: 60%;
+    transform: translateX(-20%);
+  }
+
+  .compact-options-panel {
+    display: flex !important;
+    position: absolute;
+    top: 50%;
+    right: 3rem;
+    transform: translateY(-50%);
+    flex-direction: column;
+    gap: 1.5rem;
+    background: transparent;
+    backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+    z-index: 10;
+  }
+
+  .click-hint {
+    display: block !important;
     position: absolute;
     bottom: 4rem;
     left: 50%;
@@ -1191,81 +1239,30 @@
     font-weight: 300;
   }
 
-  /* Compact options panel back to side */
-  .compact-options-panel {
-    position: absolute;
-    top: 50%;
-    right: 3rem;
-    left: auto;
-    bottom: auto;
-    transform: translateY(-50%);
-    flex-direction: column;
-    gap: 1.5rem;
-    background: transparent;
-    backdrop-filter: none;
-    border: none;
-    box-shadow: none;
-    padding: 0;
-    border-radius: 0;
-  }
-
-  .compact-option-dot {
-    width: 65px;
-    height: 65px;
-    font-size: 1.8rem;
-  }
-
-  .dot-small {
-    width: 60px;
-    height: 60px;
-    font-size: 1.6rem;
-  }
-
-  /* Side panel for larger screens */
   .options-panel {
-    top: 0;
-    right: 0;
-    left: auto;
-    width: 40%;
-    height: 100%;
-    animation: slideInRight 0.8s ease;
-    padding: 2rem;
-    justify-content: center;
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: auto !important;
+    width: 40% !important;
+    height: 100% !important;
+    background: linear-gradient(135deg, rgba(15, 15, 25, 0.95) 0%, rgba(5, 5, 15, 0.98) 100%) !important;
+    backdrop-filter: blur(30px) !important;
+    border-left: 2px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: -10px 0 50px rgba(0, 0, 0, 0.5) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 2rem !important;
+    z-index: 10 !important;
+    padding: 2rem !important;
+    animation: slideInRight 0.8s ease !important;
   }
 
-  .globe-container.globe-minimized {
-    display: block;
-    width: 60%;
-    transform: translateX(-20%);
-  }
-
-  .options-title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  .options-list {
-    max-width: none;
-  }
-
-  .option-item {
-    border-radius: 25px;
-    min-height: auto;
-  }
-}
-
-/* Desktop styles (1024px and up) */
-@media (min-width: 1024px) {
-  .compact-option-dot {
-    width: 70px;
-    height: 70px;
-    font-size: 2rem;
-  }
-
-  .dot-small {
-    width: 65px;
-    height: 65px;
-    font-size: 1.8rem;
+  /* Reset other desktop styles as needed */
+  .minimize-hint {
+    display: block !important;
   }
 }
 
